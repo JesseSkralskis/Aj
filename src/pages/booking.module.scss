@@ -26,8 +26,10 @@
   grid-row: body;
  
   grid-column: sidebar;
-  border: black solid 2px;
-  margin-bottom: 2rem;
+  height: 550px;
+  
+  
+ 
 }
 
 .bookingContent {
@@ -41,7 +43,7 @@
   // grid-template-columns: [leftGutter] 1fr [Main] 8fr [rightgutter] 1fr;
   // width: 650px;
   // height: 545px;
-  margin-bottom: 2rem;
+  margin-bottom: 1.7rem;
   
 }
 

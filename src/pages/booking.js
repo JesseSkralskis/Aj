@@ -38,10 +38,9 @@ const Booking = () => {
         </div>
         <div className={BookingStyles.sidebar}>
           <Img
-            style={{display: 'block',
-  width: '100%',
-  height: '100%',
-  }}
+            style={{
+              height: '100%'
+            }}
             imgStyle={{ objectFit: "cover" }}
             fluid={fluid}
           />
@@ -54,7 +53,7 @@ const Booking = () => {
               width: "100%",
               height: "100%",
           background: 'white',
-              border: "black solid 1px",
+              
               
               // marginLeft: "3rem"
             }}
