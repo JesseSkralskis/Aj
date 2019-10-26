@@ -1,0 +1,50 @@
+.container {
+  height: 37.5rem;
+  background: rgb(16, 14, 55);
+  border: black solid 2px;
+  display: grid;
+  row-gap: 1rem;
+  column-gap: 1rem;
+  grid-template-rows: [header] 4rem [body] auto;
+  grid-template-columns: [leftGutter] 1fr [sidebar] 4fr [bookingContent] 8fr [rightGutter] 1fr;
+}
+
+.header {
+  grid-row: header;
+  grid-column: sidebar/rightGutter;
+
+  display: flex;
+  justify-content: center;
+  margin-left: 19rem;
+  h1 {
+    margin: auto 0;
+    color: aliceblue;
+  }
+}
+
+.sidebar {
+  grid-row: body;
+ 
+  grid-column: sidebar/ bookingContent;
+  border: black solid 2px;
+}
+
+.bookingContent {
+  grid-row: body;
+  grid-column: bookingContent/rightGutter;
+
+  //   display: grid;
+  //   row-gap: 1rem;
+  // column-gap: 1rem;
+  // grid-template-rows: [head] 3rem [body] auto [bottomGutter] 2rem;
+  // grid-template-columns: [leftGutter] 1fr [Main] 8fr [rightgutter] 1fr;
+  width: 650px;
+  height: 545px;
+  
+}
+
+.calendlyInlineWidget {
+  grid-row: body;
+  grid-column: Main;
+  background: red;
+}
