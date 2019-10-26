@@ -38,8 +38,11 @@ const Booking = () => {
         </div>
         <div className={BookingStyles.sidebar}>
           <Img
-            style={{ height: "545px" }}
-            imgStyle={{ objectFit: "contain" }}
+            style={{display: 'block',
+  width: '100%',
+  height: '100%',
+  }}
+            imgStyle={{ objectFit: "cover" }}
             fluid={fluid}
           />
         </div>
@@ -48,11 +51,12 @@ const Booking = () => {
             className={['calendly-inline-widget']}
             data-url="https://calendly.com/jesseskralskis/tutoring-session"
             style={{
-              width: "650px",
-              height: "545px",
+              width: "100%",
+              height: "100%",
           background: 'white',
               border: "black solid 1px",
-              marginLeft: "3rem"
+              
+              // marginLeft: "3rem"
             }}
           >
             {/* <script

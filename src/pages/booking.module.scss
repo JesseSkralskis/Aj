@@ -6,7 +6,7 @@
   row-gap: 1rem;
   column-gap: 1rem;
   grid-template-rows: [header] 4rem [body] auto;
-  grid-template-columns: [leftGutter] 1fr [sidebar] 4fr [bookingContent] 8fr [rightGutter] 1fr;
+  grid-template-columns: [leftGutter] 1fr [sidebar] 4fr [bookingContent] 4fr [rightGutter] 1fr;
 }
 
 .header {
@@ -15,7 +15,7 @@
 
   display: flex;
   justify-content: center;
-  margin-left: 19rem;
+  
   h1 {
     margin: auto 0;
     color: aliceblue;
@@ -25,8 +25,9 @@
 .sidebar {
   grid-row: body;
  
-  grid-column: sidebar/ bookingContent;
+  grid-column: sidebar;
   border: black solid 2px;
+  margin-bottom: 2rem;
 }
 
 .bookingContent {
@@ -38,8 +39,9 @@
   // column-gap: 1rem;
   // grid-template-rows: [head] 3rem [body] auto [bottomGutter] 2rem;
   // grid-template-columns: [leftGutter] 1fr [Main] 8fr [rightgutter] 1fr;
-  width: 650px;
-  height: 545px;
+  // width: 650px;
+  // height: 545px;
+  margin-bottom: 2rem;
   
 }
 
