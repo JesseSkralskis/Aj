@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import Img from "gatsby-image/withIEPolyfill"
-import BookingStyles from "./booking.module.scss"
+import BookingStyles from "../styles/pages/booking.module.scss"
 import { Helmet } from "react-helmet"
 import { graphql, useStaticQuery } from "gatsby"
 
@@ -39,7 +39,7 @@ const Booking = () => {
         <div className={BookingStyles.sidebar}>
           <Img
             style={{
-              height: '100%'
+              height: "100%",
             }}
             imgStyle={{ objectFit: "cover" }}
             fluid={fluid}
@@ -47,14 +47,13 @@ const Booking = () => {
         </div>
         <div className={BookingStyles.bookingContent}>
           <div
-            className={['calendly-inline-widget']}
+            className={["calendly-inline-widget"]}
             data-url="https://calendly.com/jesseskralskis/tutoring-session"
             style={{
               width: "100%",
               height: "100%",
-          background: 'white',
-              
-              
+              background: "white",
+
               // marginLeft: "3rem"
             }}
           >

@@ -1,25 +1,31 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import HeaderStyles from "./header.module.scss"
+import HeaderStyles from "../styles/components/header.module.scss"
 import { Helmet } from "react-helmet"
 
 const Header = ({ siteTitle }) => (
   <div className={HeaderStyles.container}>
     <Helmet>
-      
       <script
         src="https://kit.fontawesome.com/8781c2ec8e.js"
         crossorigin="anonymous"
       ></script>
     </Helmet>
     <header>
-      <h3 className={HeaderStyles.logo}>
-        {" "}
-        <i class="fas fa-infinity fa-lg"></i> Aj's Pro Tutoring
-      </h3>
-
       <ol className={HeaderStyles.navItems}>
+        <li className={HeaderStyles.logoBox}>
+          <h3 className={HeaderStyles.logo}>
+            {" "}
+            <i
+              styles={{
+                color: "black",
+              }}
+              class="fas fa-infinity fa-lg"
+            ></i>{" "}
+            Aj's Tutoring
+          </h3>
+        </li>
         <li>
           <Link
             to="/"
@@ -44,7 +50,7 @@ const Header = ({ siteTitle }) => (
             className={HeaderStyles.navItems}
             activeClassName={HeaderStyles.active}
           >
-            What Is Offered
+            Offerings
           </Link>
         </li>
         <li>

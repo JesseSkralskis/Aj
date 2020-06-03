@@ -1,45 +1,54 @@
-import React from 'react'
+import React from "react"
 import { Helmet } from "react-helmet"
 const Footetr = () => {
-    return (
-      <footer
+  return (
+    <footer
+      style={{
+        display: "flex",
+
+        background: "rgb(220, 229, 240)",
+      }}
+    >
+      <Helmet>
+        <script
+          src="https://kit.fontawesome.com/8781c2ec8e.js"
+          crossorigin="anonymous"
+        ></script>
+      </Helmet>
+
+      <p
         style={{
-          display: "flex",
-          background: "rgb(220, 229, 240)",
+          justifyContent: "center",
+          margin: "0 auto",
+
+          paddingTop: "1rem",
+          paddingBottom: "1rem",
         }}
       >
-        <Helmet>
-          <script
-            src="https://kit.fontawesome.com/8781c2ec8e.js"
-            crossorigin="anonymous"
-          ></script>
-        </Helmet>
-
-        <p
+        <a
+          href="https://www.facebook.com/aj.newball"
           style={{
-            justifyContent: "center",
-            margin: "0 auto",
-
-            paddingTop: "1rem",
-            paddingBottom: "1rem",
+            marginRight: "3rem",
           }}
         >
-          <a
-            href="https://www.facebook.com/aj.newball"
+          <i
             style={{
-              marginRight: "3rem",
+              color: "black",
             }}
-          >
-            <i class="fab fa-facebook-square fa-lg"></i>
-          </a>{" "}
-                <small
-                    style={{
-                        fontSize: '70%'
-                    }}
-                >AJ's professional tutoring © 2019</small>
-        </p>
-      </footer>
-    )
+            class="fab fa-facebook-square fa-lg"
+          ></i>
+        </a>{" "}
+        <small
+          style={{
+            color: "black",
+            fontSize: "70%",
+          }}
+        >
+          AJ's professional tutoring © 2020
+        </small>
+      </p>
+    </footer>
+  )
 }
- 
-export default Footetr;
+
+export default Footetr

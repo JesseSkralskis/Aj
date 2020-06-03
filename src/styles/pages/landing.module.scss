@@ -1,0 +1,36 @@
+.container {
+  
+  height: 81.5vh;
+  display: grid;
+  // grid-gap: 1rem;
+  // column-gap: 1rem;
+  grid-template-rows: [headerGutter] 3rem [body] auto [footergutter] 20rem;
+  grid-template-columns: [leftGutter] 3fr [card] 4fr [rightGutter] 0.3fr;
+  border: black solid 1px;
+}
+
+.card {
+  grid-row: body;
+  grid-column: card;
+  background: rgba(128, 126, 126, 0.67);
+  padding: 2rem;
+  border: black solid 1px;
+  h1 {
+    text-align: center;
+    color: rgb(81, 10, 131);
+    font-weight: 900;
+    font-size: 45px;
+  }
+
+  p {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 30px;
+
+    line-height: 1.5;
+    margin-top: 1.5rem;
+  }
+}
+.content {
+}
