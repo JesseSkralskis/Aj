@@ -1,97 +1,29 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+**Client Tutoring Site**
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+I have a client who has a math tutoring business. Most of his students would come from word of mouth, but he wanted to expand his business and create a web site that would attract more students. He wanted to be able to change content but has no coding experience. He also wanted a booking system that would allow users to book appointments from the web site and send him an email notification when the appointment was booked, I did some research on the best way to tackle this job and decided to build his site using the JAM stack. I used contentful as the cms Gatsby for building the site and Netlify to deploy the site. I also used Web hooks within Netlify and Contentful that allowed when my client changes content within Contentful it automatically rebuilds the repository rebuilds and then deploys in Netlify.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+The site consists of the Landing page with a nav bar to the different pages of the site. The slogan within the card was decided on by the client who also had input on the color palette.
 
-## 🚀 Quick start
+The background picture and the slogan header and paragraph below can all be changed very simply within the Contentful cms whenever the client decides by just dragging and dropping photos or editing the text.
 
-1.  **Create a Gatsby site.**
+![alt_text](/src/images/landing.png "image_tooltip")
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+The about me page gives information about my clients credentials and tells the story of why students should choose him as their math tutor. Again the text and the phota can be changed at any time by my client within Contentful.
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+![alt_text](/src/images/about.png "image_tooltip")
 
-1.  **Start developing.**
+The client wanted to add a page that displayed all of the different services he offered. Me and him discussed how he wanted the offerings to be listed and appear on the page as well as the photo. And He was happy to have the flexibility to also be able to change this as needed without having to pay me an updating fee.
 
-    Navigate into your new site’s directory and start it up.
+![alt_text](/src/images/offerings.png "image_tooltip")
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+The Client was very specific about how he wanted the booking system to work. It had to be a system that allowed him to designate open times for tutoring that when filled would then be rendered unavailable to other students once booked. He also wanted his students to have the ability to use Paypal for payments. After considering building this functionality myself I did some research and found a very useful plugin called Calendry. For a small fee all the functionality the client requested was already included in Calendry’s features. I just needed to embed the interface directly into the site and the plugin would take care of the rest. My client was very happy with this option because the price for me to build an entire booking system in his site would have been quite a bit more than the small monthly fee from Calendry. The photo in this page can also be changed automatically from the Contentful cms.
 
-1.  **Open the source code and start editing!**
+![alt_text](/src/images/bookiing.png "image_tooltip")
 
-    Your site is now running at `http://localhost:8000`!
+Technology
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+This project required me learning and implementing many different technologies. The biggest two were learning Gatsby and learning GraphQl. Furthermore I needed to learn how to set up the Contentful cms for the client and teach him what he would need to do when he needed to change content. I have a background in React so learning Gatsby was very intuitive and I ended up really appreciating the workflow that it offered. I had heard so much about how great the Jam Stack was and how Gatsby optimised loading times and I wasn't. disappointed. I also really enjoyed learning graphQl and saw first hand the benefit of being able to be selective of what I pull from APIs rather than the old restful approach. In general most of the pages had the same flow. Through a Gatsby config file I set up a Gatsby-Contentful plugin that through a space id and an access token allows Gatsby to have access to the content within Contentful. For each Page I would make a graphQl query requesting the given content using its specific slug. Also within the query I could set parameters for the images using another Gatsby Plugin called Gatsby-Sharp. This allows for photo optimization as well as adding effects, and dictating size. I would then take the response from the GraphQl query and distribute it within the page using the jsx. For Navigation between pages gatsby has built in Link plugins almost identical to using React Router. It was as simple as wrapping some h1’s in With a link Component and assigning the to=”/” to whatever the name of the page was.
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+**New Features**
 
-## 🧐 What's inside?
-
-A quick look at the top-level files and directories you'll see in a Gatsby project.
-
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
-
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
-
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
-
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
-
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
-
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
-
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+As of writing this I have been in discussions with my client about adding new features. He decided he wants more diversity in payment options within the site. So I am now adding in the Stripe api which allows for many different options for payment and is also very secure. I have created the 4 tutoring packages with the prices attached within the Stripe account and have set up the configuration that allows Gatsby and Stripe to connect. I have built the component buttons that when clicked allow his students to be redirected directly to a stripe page with the chosen product. I am currently designing the payment page and will be implementing and deploying it soon. My client also wants to transition his business to more virtual sessions because of the new coronavirus environment we are all living in now. So for this I will be adding a page that is a dedicated zoom room where the user will be able to from the site be able to click a button and be able to connect with my Client to start a session virtually.

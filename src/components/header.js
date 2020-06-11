@@ -62,6 +62,12 @@ const Header = ({ siteTitle }) => (
             Booking
           </Link>
         </li>
+
+        <li>
+          <Link to="/payment">
+
+          </Link>
+        </li>
       </ol>
     </header>
   </div>

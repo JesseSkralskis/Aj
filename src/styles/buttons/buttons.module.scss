@@ -1,0 +1,22 @@
+.buttons {
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
+  outline: none;
+  padding: 12px 60px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
+  background: blue;
+  border-radius: 6px;
+  letter-spacing: 1.5px;
+}
+
+.buttons--bronze {
+  background: rgb(201, 148, 69);
+}
+.buttons--silver {
+  background: silver;
+}
+.buttons--gold {
+  background: gold;
+}
