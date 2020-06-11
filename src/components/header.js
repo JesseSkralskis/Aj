@@ -59,14 +59,12 @@ const Header = ({ siteTitle }) => (
             className={HeaderStyles.navItems}
             activeClassName={HeaderStyles.active}
           >
-            Booking
+            Payment
           </Link>
         </li>
 
         <li>
-          <Link to="/payment">
-
-          </Link>
+          <Link to="/payment"></Link>
         </li>
       </ol>
     </header>
