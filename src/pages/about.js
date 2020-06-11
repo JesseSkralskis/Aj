@@ -52,7 +52,7 @@ const About = () => {
             grade adding to differential equations at San Jose State University
             in the heart of Silicon Valley AJ has the experience, vision, and
             understanding to help you overcome any mathematical obstacles in
-            your path...
+            your path..
           </p>
         </div>
       </div>
