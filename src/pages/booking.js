@@ -7,9 +7,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { loadStripe } from "@stripe/stripe-js"
 import ButtonStyles from "../styles/buttons/buttons.module.scss"
 
-const stripePromise = loadStripe(
-  "pk_test_51GqMxrCmetnbxKY0fsuaDeGMrIx1LPDpFqPXriinuQKLWqV6JD1NXdncSvRpJgd0Ii4gDXirSbrNN2BACKyJz3YL00H9Ou0KR6"
-)
+const stripePromise = loadStripe(process.env.GATSBY_STRIPE_PK_KEY)
 
 const redirectToCheckout = async event => {
   event.preventDefault()
