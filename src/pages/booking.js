@@ -14,8 +14,8 @@ const redirectToCheckout = async event => {
   const stripe = await stripePromise
   const { error } = await stripe.redirectToCheckout({
     lineItems: [{ price: "price_1GrnMECmetnbxKY0MuOSKFz2", quantity: 1 }],
-    successUrl: `http://localhost:8000/`,
-    cancelUrl: `http://localhost:8000/`,
+    successUrl: `https://upbeat-bardeen-c5aa6c.netlify.app/`,
+    cancelUrl: `https://upbeat-bardeen-c5aa6c.netlify.app/`,
     mode: "payment",
   })
 
@@ -29,8 +29,8 @@ const redirectToCheckout2 = async event => {
   const stripe = await stripePromise
   const { error } = await stripe.redirectToCheckout({
     lineItems: [{ price: "price_1GvWJGCmetnbxKY0S2ji4SSZ", quantity: 1 }],
-    successUrl: `http://localhost:8000/`,
-    cancelUrl: `http://localhost:8000/`,
+    successUrl: `https://upbeat-bardeen-c5aa6c.netlify.app/`,
+    cancelUrl: `https://upbeat-bardeen-c5aa6c.netlify.app/`,
     mode: "payment",
   })
 
@@ -44,8 +44,8 @@ const redirectToCheckout3 = async event => {
   const stripe = await stripePromise
   const { error } = await stripe.redirectToCheckout({
     lineItems: [{ price: "price_1GvWIsCmetnbxKY0UP2hqxVV", quantity: 1 }],
-    successUrl: `http://localhost:8000/`,
-    cancelUrl: `http://localhost:8000/`,
+    successUrl: `https://upbeat-bardeen-c5aa6c.netlify.app/`,
+    cancelUrl: `https://upbeat-bardeen-c5aa6c.netlify.app/`,
     mode: "payment",
   })
 
@@ -59,8 +59,8 @@ const redirectToCheckout4 = async event => {
   const stripe = await stripePromise
   const { error } = await stripe.redirectToCheckout({
     lineItems: [{ price: "price_1GvWIdCmetnbxKY0AyEcDMRm", quantity: 1 }],
-    successUrl: `http://localhost:8000/`,
-    cancelUrl: `http://localhost:8000/`,
+    successUrl: `https://upbeat-bardeen-c5aa6c.netlify.app/`,
+    cancelUrl: `https://upbeat-bardeen-c5aa6c.netlify.app/`,
     mode: "payment",
   })
 
