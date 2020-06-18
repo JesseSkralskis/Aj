@@ -36,19 +36,41 @@ const Offered = () => {
           <div className={OfferedStyles.header}>
             <h1>Offerings</h1>
           </div>
-          <div className={OfferedStyles.offerings_left}>
-            <p>Direct 1-1 tutoring</p>
-            <p>SAT/ACT tutoring</p>
-            <p>Career math needs counseling</p>
-            <p>Math Anxiety Therapy</p>
-            <p>Group tutoring</p>
-          </div>
-          <div className={OfferedStyles.offerings_right}>
-            <p>Educator Guidance</p>
-            <p>Parent Guidance</p>
-            <p>Online tutoring</p>
-            <p>Summer Workshops</p>
-            <p>Travel Tutoring</p>
+          <div className={OfferedStyles.offerings}>
+            <p>
+              Direct 1-1 <br /> tutoring
+            </p>
+            <p>
+              SAT/ACT <br /> tutoring
+            </p>
+            <p>
+              Career <br /> Counseling
+            </p>
+            <p>
+              Math Anxiety <br /> Therapy
+            </p>
+            <p>
+              Group <br />
+              tutoring
+            </p>
+
+            <p>
+              Educator <br /> Guidance
+            </p>
+            <p>
+              Parent <br />
+              Guidance
+            </p>
+            <p>
+              Online <br />
+              tutoring
+            </p>
+            <p>
+              Summer <br /> Workshops
+            </p>
+            <p>
+              Travel <br /> Tutoring
+            </p>
           </div>
         </div>
       </BackgroundImage>

@@ -12,61 +12,53 @@ const Header = ({ siteTitle }) => (
         crossorigin="anonymous"
       ></script>
     </Helmet>
-    <header>
-      <ol className={HeaderStyles.navItems}>
-        <li className={HeaderStyles.logoBox}>
-          <h3 className={HeaderStyles.logo}>
-            {" "}
-            <i
-              styles={{
-                color: "black",
-              }}
-              class="fas fa-infinity fa-lg"
-            ></i>{" "}
-            Aj's Tutoring
-          </h3>
-        </li>
-        <li>
-          <Link
-            to="/"
-            className={HeaderStyles.navItems}
-            activeClassName={HeaderStyles.active}
-          >
-            home
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/about"
-            className={HeaderStyles.navItems}
-            activeClassName={HeaderStyles.active}
-          >
-            About Me
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/offered"
-            className={HeaderStyles.navItems}
-            activeClassName={HeaderStyles.active}
-          >
-            Offerings
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/booking"
-            className={HeaderStyles.navItems}
-            activeClassName={HeaderStyles.active}
-          >
-            Payment
-          </Link>
-        </li>
+    <header className={HeaderStyles.headerContainer}>
+      <div className={HeaderStyles.navItems}>
+        <h3 className={HeaderStyles.navItem}>
+          {" "}
+          <i
+            styles={{
+              color: "black",
+            }}
+            class="fas fa-infinity fa-lg"
+          ></i>{" "}
+          AJ's Math <span className={HeaderStyles.tutoring}>Tutoring</span>
+        </h3>
 
-        <li>
-          <Link to="/payment"></Link>
-        </li>
-      </ol>
+        <Link
+          to="/"
+          className={HeaderStyles.navItem}
+          activeClassName={HeaderStyles.active}
+        >
+          Home
+        </Link>
+
+        <Link
+          to="/about"
+          className={HeaderStyles.navItem}
+          activeClassName={HeaderStyles.active}
+        >
+          About Me
+        </Link>
+
+        <Link
+          to="/offered"
+          className={HeaderStyles.navItem}
+          activeClassName={HeaderStyles.active}
+        >
+          Offerings
+        </Link>
+
+        <Link
+          to="/booking"
+          className={HeaderStyles.navItem}
+          activeClassName={HeaderStyles.active}
+        >
+          Payment
+        </Link>
+
+        <Link to="/payment"></Link>
+      </div>
     </header>
   </div>
 )

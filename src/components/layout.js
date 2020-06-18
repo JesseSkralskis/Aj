@@ -14,26 +14,17 @@ import Header from "./header"
 import Footer from "./footer"
 
 const Layout = props => {
-  // const data = useStaticQuery(graphql`
-  //   query SiteTitleQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
-
   return (
     <div className={layoutStyles.container}>
-      <div className={layoutStyles.content}>
+      <div className={layoutStyles.header}>
         <Header />
-        {props.children}
       </div>
 
-      {/* sticky footer */}
+      <div className={layoutStyles.content}> {props.children}</div>
 
-      <Footer />
+      <div className={layoutStyles.footer}>
+        <Footer />
+      </div>
     </div>
   )
 }

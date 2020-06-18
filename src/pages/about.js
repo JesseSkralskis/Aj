@@ -36,8 +36,9 @@ const About = () => {
       <div className={AboutStyles.container}>
         <div className={AboutStyles.image}>
           <Img
-            style={{ maxHeight: "100%" }}
-            imgStyle={{ objectFit: "cover" }}
+            className={AboutStyles.pic}
+            // style={{}}
+
             fluid={data.Aj.childImageSharp.fluid}
           />
         </div>

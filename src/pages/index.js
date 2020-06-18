@@ -9,6 +9,14 @@ import BackgroundImage from "gatsby-background-image"
 import LandingStyles from "../styles/pages/landing.module.scss"
 
 const IndexPage = () => {
+  const positionMaker = () => {
+    if (window.innerWidth <= 360) {
+      return { backgroundPosition: "-7rem 0" }
+    }
+    if (window.innerWidth <= 375) {
+      return { backgroundPosition: "-12rem 0" }
+    }
+  }
   const data = useStaticQuery(graphql`
     query {
       allContentfulAjContent {
@@ -32,13 +40,14 @@ const IndexPage = () => {
         Tag="section"
         className={LandingStyles.container}
         fluid={fluid}
+        style={positionMaker()}
       >
         <div className={LandingStyles.card}>
           <div className={LandingStyles.content}>
-            <h1>Problems come to be solved</h1>
+            <h1>"Problems come to be solved"</h1>
             <p>
               Ensure the brightest future for your child or yourself by getting
-              one of the worlds premier math tutors: AJ Newball.
+              one of the world's premier math tutors.
             </p>
           </div>
         </div>

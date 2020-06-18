@@ -5,7 +5,7 @@ const Footetr = () => {
     <footer
       style={{
         display: "flex",
-
+        height: "100%",
         background: "rgb(220, 229, 240)",
       }}
     >

@@ -1,12 +1,22 @@
 .container {
   margin: 0 auto;
-  // max-width: 750px;
-  // padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: [header] 15% [rowbody] 75% [footer] 10% [end];
+  grid-template-columns: [body] auto [end];
+}
+
+.header {
+  grid-row: header;
+  grid-column: body;
 }
 
 .content {
-  flex-grow: 1;
+  grid-row: rowbody;
+  grid-column: body;
+}
+
+.footer {
+  grid-row: footer;
+  grid-column: body;
 }

@@ -13,7 +13,7 @@ const redirectToCheckout = async event => {
   event.preventDefault()
   const stripe = await stripePromise
   const { error } = await stripe.redirectToCheckout({
-    lineItems: [{ price: "price_1GrnTJCmetnbxKY09ukENd08", quantity: 1 }],
+    lineItems: [{ price: "price_1GrnMECmetnbxKY0MuOSKFz2", quantity: 1 }],
     successUrl: `http://localhost:8000/`,
     cancelUrl: `http://localhost:8000/`,
     mode: "payment",
@@ -28,7 +28,7 @@ const redirectToCheckout2 = async event => {
   event.preventDefault()
   const stripe = await stripePromise
   const { error } = await stripe.redirectToCheckout({
-    lineItems: [{ price: "price_1Grq2nCmetnbxKY0YFa9GSLA", quantity: 1 }],
+    lineItems: [{ price: "price_1GvWJGCmetnbxKY0S2ji4SSZ", quantity: 1 }],
     successUrl: `http://localhost:8000/`,
     cancelUrl: `http://localhost:8000/`,
     mode: "payment",
@@ -43,7 +43,7 @@ const redirectToCheckout3 = async event => {
   event.preventDefault()
   const stripe = await stripePromise
   const { error } = await stripe.redirectToCheckout({
-    lineItems: [{ price: "price_1GrqGeCmetnbxKY0XpGwHyUw", quantity: 1 }],
+    lineItems: [{ price: "price_1GvWIsCmetnbxKY0UP2hqxVV", quantity: 1 }],
     successUrl: `http://localhost:8000/`,
     cancelUrl: `http://localhost:8000/`,
     mode: "payment",
@@ -58,7 +58,7 @@ const redirectToCheckout4 = async event => {
   event.preventDefault()
   const stripe = await stripePromise
   const { error } = await stripe.redirectToCheckout({
-    lineItems: [{ price: "price_1GrqKLCmetnbxKY0tQ7cSmuB", quantity: 1 }],
+    lineItems: [{ price: "price_1GvWIdCmetnbxKY0AyEcDMRm", quantity: 1 }],
     successUrl: `http://localhost:8000/`,
     cancelUrl: `http://localhost:8000/`,
     mode: "payment",
@@ -90,13 +90,16 @@ const Booking = () => {
 
   return (
     <Layout>
-      <Helmet></Helmet>
       <div className={BookingStyles.container}>
         <div className={BookingStyles.header}>
           <h1>Payment</h1>
         </div>
         <div className={BookingStyles.sidebar}>
-          <Img style={{}} imgStyle={{ objectFit: "cover" }} fluid={fluid} />
+          <Img
+            className={BookingStyles.pic}
+            imgStyle={{ objectFit: "cover" }}
+            fluid={fluid}
+          />
         </div>
         <div className={BookingStyles.bookingContent}>
           <div className={BookingStyles.explanation}>
@@ -134,11 +137,18 @@ const Booking = () => {
               Gold Package
             </button>
           </div>
+
           <div className={BookingStyles.descriptions}>
-            <h5> One Session with no discount</h5>
-            <h5>Ten Sessions 10% discount</h5>
-            <h5>Twenty Sessions 15% discount</h5>
-            <h5>Thirty Sessions 20% discount</h5>
+            <h5> Single {window.innerWidth < 700 && <br />} Session</h5>
+            <h5>
+              Ten Sessions {window.innerWidth < 700 && <br />} 10% discount
+            </h5>
+            <h5>
+              Twenty Sessions {window.innerWidth < 700 && <br />} 15% discount
+            </h5>
+            <h5>
+              Thirty Sessions {window.innerWidth < 700 && <br />} 20% discount
+            </h5>
           </div>
         </div>
       </div>
