@@ -139,15 +139,34 @@ const Booking = () => {
           </div>
 
           <div className={BookingStyles.descriptions}>
-            <h5> Single {window.innerWidth < 700 && <br />} Session</h5>
             <h5>
-              Ten Sessions {window.innerWidth < 700 && <br />} 10% discount
+              {" "}
+              Single{" "}
+              {typeof window !== "undefined" && window.innerWidth < 700 && (
+                <br />
+              )}{" "}
+              Session
             </h5>
             <h5>
-              Twenty Sessions {window.innerWidth < 700 && <br />} 15% discount
+              Ten Sessions{" "}
+              {typeof window !== "undefined" && window.innerWidth < 700 && (
+                <br />
+              )}{" "}
+              10% discount
             </h5>
             <h5>
-              Thirty Sessions {window.innerWidth < 700 && <br />} 20% discount
+              Twenty Sessions{" "}
+              {typeof window !== "undefined" && window.innerWidth < 700 && (
+                <br />
+              )}{" "}
+              15% discount
+            </h5>
+            <h5>
+              Thirty Sessions{" "}
+              {typeof window !== "undefined" && window.innerWidth < 700 && (
+                <br />
+              )}{" "}
+              20% discount
             </h5>
           </div>
         </div>

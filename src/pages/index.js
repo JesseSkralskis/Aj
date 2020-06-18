@@ -10,10 +10,10 @@ import LandingStyles from "../styles/pages/landing.module.scss"
 
 const IndexPage = () => {
   const positionMaker = () => {
-    if (window.innerWidth <= 360) {
+    if (typeof window !== 'undefined' && window.innerWidth <= 360) {
       return { backgroundPosition: "-7rem 0" }
     }
-    if (window.innerWidth <= 375) {
+    if (typeof window !== "undefined" && window.innerWidth <= 375) {
       return { backgroundPosition: "-12rem 0" }
     }
   }
