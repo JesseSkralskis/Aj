@@ -47,7 +47,7 @@ const About = () => {
           <h3>About Me</h3>
           <p>
             AJ Newball is a math educator of the highest caliber and experience.
-            It is very rare to find anyone who has taught math at the
+            It is very rare to find a tutor who has taught math at the
             elementary, middle, high school, community college, university
             levels and internationally in Japan, Taiwan and Thailand. From first
             grade adding to differential equations at San Jose State University
