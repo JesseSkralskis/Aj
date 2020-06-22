@@ -7,6 +7,15 @@ import { graphql, useStaticQuery } from "gatsby"
 import { Helmet } from "react-helmet"
 
 const About = () => {
+  const picSize = () => {
+    if (typeof window !== "undefined" && window.innerWidth <= 500) {
+      return { margin: "0rem", maxHeight: "calc(45vh - 4rem)" }
+    }
+    if (typeof window !== "undefined" && window.innerWidth <= 2000) {
+      return { margin: "0rem", maxHeight: "calc(75vh - 4rem)" }
+    }
+  }
+
   const data = useStaticQuery(graphql`
     query {
       Aj: file(relativePath: { eq: "Aj.jpg" }) {
@@ -36,9 +45,9 @@ const About = () => {
       <div className={AboutStyles.container}>
         <div className={AboutStyles.image}>
           <Img
+            style={picSize()}
             className={AboutStyles.pic}
-            // style={{}}
-
+            imgStyle={{ objectFit: "cover" }}
             fluid={data.Aj.childImageSharp.fluid}
           />
         </div>

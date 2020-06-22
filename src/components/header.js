@@ -16,13 +16,7 @@ const Header = ({ siteTitle }) => (
       <div className={HeaderStyles.navItems}>
         <h3 className={HeaderStyles.navItem}>
           {" "}
-          <i
-            styles={{
-              color: "black",
-            }}
-            class="fas fa-infinity fa-lg"
-          ></i>{" "}
-          AJ's Math <span className={HeaderStyles.tutoring}>Tutoring</span>
+          <i class="fas fa-infinity fa-lg"></i> AJ's Math Tutoring
         </h3>
 
         <Link

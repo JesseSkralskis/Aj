@@ -4,6 +4,7 @@
   display: grid;
   grid-template-rows: [header] 15% [rowbody] 75% [footer] 10% [end];
   grid-template-columns: [body] auto [end];
+  overflow: hidden;
 }
 
 .header {

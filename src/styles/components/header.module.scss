@@ -7,17 +7,6 @@
   }
 }
 
-.logo {
-  // float: left;
-
-  // border: solid black 1px;
-  color: rgb(73, 65, 65);
-  i {
-    color: black;
-    padding-right: 1rem;
-  }
-}
-
 .headerContainer {
   height: 100%;
 }
@@ -25,12 +14,27 @@
 .nav-items {
   display: flex;
   flex-wrap: wrap;
+  height: 100%;
 
-  // margin: 0 5rem 0rem 3rem;
-  // padding-bottom: 1rem;
   text-decoration: none;
   color: rgb(23, 23, 28);
   font-weight: 550;
+
+  @media (min-width: 450px) {
+  }
+  :first-child {
+    i {
+      padding-right: 0.5rem;
+      height: 2rem;
+      @media (min-width: 700px) {
+        font-size: 20px;
+      }
+      @media (min-width: 768px) {
+        font-size: 40px;
+      }
+    }
+  }
+
   @media (min-width: 320px) {
     font-size: 12px;
   }
@@ -45,52 +49,39 @@
     font-size: 28px;
   }
   @media (min-width: 1280px) {
-    font-size: 23px;
+    font-size: 18px;
   }
   h3 {
     @media (min-width: 320px) {
       font-size: 15px;
       width: 100%;
-      padding-top: 1rem;
     }
     @media (min-width: 375px) {
-      padding-top: 2rem;
     }
     @media (min-width: 768px) {
-      padding-top: 2rem;
       font-size: 24px;
     }
     @media (min-width: 1024px) {
-      padding-top: 2.5rem;
-      font-size: 32px;
+      font-size: 35px;
     }
     @media (min-width: 1280px) {
-      font-size: 28px;
-      display: inline-block;
-
-      width: 0;
-      padding-left: 2rem;
-      padding-top: 1.5rem;
+      font-size: 20px;
     }
     @media (min-width: 1280px) {
-      padding-top: 2.5rem;
+      padding-top: 1rem;
+      padding-right: 1rem;
     }
     @media (min-width: 1900px) {
-      padding-top: 3rem;
-      padding-left: 7rem;
     }
   }
 }
 
 .nav-item:hover {
-  color: rgb(135, 135, 136);
+  color: rgb(82, 82, 119);
 }
 
 .active-nav-item {
   color: #333333;
-}
-
-.logoBox {
 }
 
 .nav-item {
@@ -99,36 +90,13 @@
   flex-grow: 1;
   min-width: 20%;
 
+  margin: 0;
   display: flex;
   justify-content: center;
-  height: 2rem;
+  align-items: center;
 
-  @media (min-width: 375px) {
-    padding-top: 1rem;
+  i {
+    margin-right: 0.5rem;
+    font-size: 28px;
   }
-
-  @media (min-width: 768px) {
-    padding-top: 2rem;
-  }
-  @media (min-width: 1024px) {
-    padding-top: 3rem;
-  }
-  @media (min-width: 1280px) {
-  }
-  @media (min-width: 1900px) {
-    padding-top: 3.5rem;
-  }
-}
-.tutoring {
-  @media (min-width: 500px) {
-    display: inline-block;
-    margin-left: 0;
-  }
-  @media (min-width: 1200px) {
-    display: inline-block;
-    margin-left: 4rem;
-  }
-}
-i {
-  margin-right: 1rem;
 }

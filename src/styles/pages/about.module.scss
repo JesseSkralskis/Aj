@@ -23,29 +23,29 @@
 }
 
 .pic {
-  background-size: cover;
-  height: 33rem;
-  @media (min-width: 320px) {
-    height: 15rem;
-  }
+  // background-size: cover;
+  // height: 33rem;
+  // @media (min-width: 320px) {
+  //   height: 15rem;
+  // }
 
-  @media (min-width: 768px) {
-    height: 38rem;
-  }
-  @media (min-width: 1024px) {
-    height: 52rem;
-  }
+  // @media (min-width: 768px) {
+  //   height: 38rem;
+  // }
+  // @media (min-width: 1024px) {
+  //   height: 52rem;
+  // }
 
-  @media (min-width: 1280px) {
-    height: 28.5rem;
-  }
-  @media (min-width: 1440px) {
-    height: 33rem;
-  }
+  // @media (min-width: 1280px) {
+  //   height: 28.5rem;
+  // }
+  // @media (min-width: 1440px) {
+  //   height: 33rem;
+  // }
 
-  @media (min-width: 1900px) {
-    height: 40rem;
-  }
+  // @media (min-width: 1900px) {
+  //   height: 40rem;
+  // }
 }
 .bio {
   grid-row: rowBody/marginBottom;

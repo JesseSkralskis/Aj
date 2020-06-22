@@ -70,6 +70,62 @@ const redirectToCheckout4 = async event => {
 }
 
 const Booking = () => {
+  const picSize = () => {
+    if (typeof window !== "undefined" && window.innerWidth <= 350) {
+      return { marginLeft: "2rem", maxHeight: "calc(33vh - 4rem)" }
+    }
+    if (
+      typeof window !== "undefined" &&
+      window.innerWidth <= 400 &&
+      typeof window !== "undefined" &&
+      window.innerHeight <= 650
+    ) {
+      return { marginLeft: "2rem", maxHeight: "calc(38vh - 4rem)" }
+    }
+    if (
+      typeof window !== "undefined" &&
+      window.innerWidth <= 400 &&
+      typeof window !== "undefined" &&
+      window.innerHeight <= 670
+    ) {
+      return { marginLeft: "2rem", maxHeight: "calc(31vh - 4rem)" }
+    }
+
+    if (
+      typeof window !== "undefined" &&
+      window.innerWidth <= 400 &&
+      typeof window !== "undefined" &&
+      window.innerHeight <= 820
+    ) {
+      return { marginLeft: "2rem", maxHeight: "calc(38vh - 4rem)" }
+    }
+    if (
+      typeof window !== "undefined" &&
+      window.innerWidth <= 450 &&
+      typeof window !== "undefined" &&
+      window.innerHeight <= 750
+    ) {
+      return { marginLeft: "2rem", maxHeight: "calc(32vh - 4rem)" }
+    }
+    if (
+      typeof window !== "undefined" &&
+      window.innerWidth <= 450 &&
+      typeof window !== "undefined" &&
+      window.innerHeight <= 823
+    ) {
+      return { marginLeft: "2rem", maxHeight: "calc(36vh - 4rem)" }
+    }
+
+    if (typeof window !== "undefined" && window.innerWidth <= 780) {
+      return { marginLeft: "2rem", maxHeight: "calc(30vh - 4rem)" }
+    }
+    if (typeof window !== "undefined" && window.innerWidth <= 1024) {
+      return { marginLeft: "2rem", maxHeight: "calc(31vh - 4rem)" }
+    }
+    if (typeof window !== "undefined" && window.innerWidth <= 2000) {
+      return { marginTop: "2.5rem", maxHeight: "calc(57vh - 4rem)" }
+    }
+  }
   const data = useStaticQuery(graphql`
     query {
       allContentfulAjContent {
@@ -98,6 +154,7 @@ const Booking = () => {
           <Img
             className={BookingStyles.pic}
             imgStyle={{ objectFit: "cover" }}
+            style={picSize()}
             fluid={fluid}
           />
         </div>

@@ -1,14 +1,9 @@
 import React from "react"
 import { Helmet } from "react-helmet"
+import FooterStyles from "../styles/components/footer.module.scss"
 const Footetr = () => {
   return (
-    <footer
-      style={{
-        display: "flex",
-        height: "100%",
-        background: "rgb(220, 229, 240)",
-      }}
-    >
+    <footer className={FooterStyles.container}>
       <Helmet>
         <script
           src="https://kit.fontawesome.com/8781c2ec8e.js"
@@ -16,21 +11,11 @@ const Footetr = () => {
         ></script>
       </Helmet>
 
-      <p
-        style={{
-          justifyContent: "center",
-          margin: "0 auto",
+      <h4>Phone Number: 1-510-229-0949</h4>
+      <h4>Email: aj@ajmathguru.com</h4>
 
-          paddingTop: "1rem",
-          paddingBottom: "1rem",
-        }}
-      >
-        <a
-          href="https://www.facebook.com/aj.newball"
-          style={{
-            marginRight: "3rem",
-          }}
-        >
+      {/* <p style={{}}>
+        <a href="https://www.facebook.com/aj.newball">
           <i
             style={{
               color: "black",
@@ -46,7 +31,7 @@ const Footetr = () => {
         >
           AJ's professional tutoring © 2020
         </small>
-      </p>
+      </p> */}
     </footer>
   )
 }
