@@ -123,7 +123,7 @@ const Booking = () => {
       return { marginLeft: "2rem", maxHeight: "calc(31vh - 4rem)" }
     }
     if (typeof window !== "undefined" && window.innerWidth <= 2000) {
-      return { marginTop: "2.5rem", maxHeight: "calc(57vh - 4rem)" }
+      return { marginTop: "1rem", maxHeight: "calc(61vh - 4rem)" }
     }
   }
   const data = useStaticQuery(graphql`
