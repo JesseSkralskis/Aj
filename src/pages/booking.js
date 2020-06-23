@@ -161,11 +161,11 @@ const Booking = () => {
         <div className={BookingStyles.bookingContent}>
           <div className={BookingStyles.explanation}>
             <p>
-              To get the most out of tutoring it is important for a student to
-              have a regular consistant approach to the learning. We offer one
-              off sessions but to get the most benifit we reccomend booking one
-              of the packages that all come with discounts based on amount of
-              sessions.
+              To get the most out of tutoring it is important for students to
+              have at least one or two regular weekly sessions. A true
+              transformation of confidence and understanding of math and how to
+              learn math will come with this regularity. Here are several
+              payment options:
             </p>
           </div>
           <div className={BookingStyles.buttons}>
